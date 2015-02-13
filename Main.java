@@ -37,7 +37,7 @@ public class Main {
 			case 2: 
 				leftNumber = getComplex("Left Number", in);
 				rightNumber = getComplex("Right Number", in);
-				result = leftNumber.subtract(rightNumber);
+				result = leftNumber.complexSubtract(rightNumber);
 				System.out.println(leftNumber + " - " + rightNumber + " = " + result );
 				break;
 			case 3: 
