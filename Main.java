@@ -43,7 +43,7 @@ public class Main {
 			case 3: 
 				leftNumber = getComplex("Left Number", in);
 				rightNumber = getComplex("Right Number", in);
-				result = leftNumber.multiply(rightNumber);
+				result = leftNumber.complexMultiply(rightNumber);
 				System.out.println(leftNumber + " * " + rightNumber + " = " + result );
 				break;
 			case 4: 

@@ -23,7 +23,7 @@ public class ComplexNumbersTest {
 	@Test
 	public void test() {
 		fail("Not yet implemented");
-		//Add method tests
+		//Addition method tests
 		Complex x = new Complex(0,1);
 		Complex y = new Complex(-1,0);
 		Complex a = new Complex(20000, -25000);
@@ -33,13 +33,17 @@ public class ComplexNumbersTest {
 		System.out.println(Complex.toString(Complex.complexAdd(x, b)));
 		System.out.println(Complex.toString(Complex.complexAdd(a, b)));
 		
-		//Subtract method tests
+		//Subtraction method tests
 		System.out.println(Complex.toString(Complex.complexSubtract(x, y)));
 		System.out.println(Complex.toString(Complex.complexSubtract(a, y)));
 		System.out.println(Complex.toString(Complex.complexSubtract(x, b)));
 		System.out.println(Complex.toString(Complex.complexSubtract(a, b)));
 		
-		
+		//Multiplication method tests
+		System.out.println(Complex.toString(Complex.complexMultiply(x, y)));
+		System.out.println(Complex.toString(Complex.complexMultiply(a, y)));
+		System.out.println(Complex.toString(Complex.complexMultiply(x, b)));
+		System.out.println(Complex.toString(Complex.complexMultiply(a, b)));
 	}
 
 	

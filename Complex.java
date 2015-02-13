@@ -28,7 +28,7 @@ public class Complex {
 		return ret;
 	}
 	
-	//Allows the user to add complex numbers to another without specifying both numbers, using one previously specified with .add
+	//Allows the user to add complex numbers without specifying both numbers, using one previously specified with .add
 	public Complex complexAdd(Complex a){
 		this.real += a.real;
 		this.imaginary += a.imaginary;
@@ -43,7 +43,7 @@ public class Complex {
 		return value;
 	}
 	
-	//Allows the user to subtract complex numbers to another without specifying both numbers, using one previously specified with .subtract
+	//Allows the user to subtract complex numbers without specifying both numbers, using one previously specified with .subtract
 	public Complex complexSubtract(Complex a){
 		this.real = this.real - a.real;
 		this.imaginary = this.imaginary - a.imaginary;
@@ -56,6 +56,12 @@ public class Complex {
 			value.real = a.real - b.real;
 			value.imaginary = a.imaginary - b.imaginary;
 			return value;
+		}
+		
+		//Allows the user to multiply complex numbers without specifying both numbers, using one previously specified with .multiply
+		public Complex complexMultiply(Complex a){
+			this.real = (this.real*a.real) - (this.imaginary*a.imaginary);
+			this.imaginary = 
 		}
 	
 	
