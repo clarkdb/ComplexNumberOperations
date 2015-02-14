@@ -1,5 +1,3 @@
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -22,7 +20,6 @@ public class ComplexNumbersTest {
 	
 	@Test
 	public void test() {
-		fail("Not yet implemented");
 		//Addition method tests
 		Complex x = new Complex(0,1);
 		Complex y = new Complex(-1,0);
@@ -44,6 +41,13 @@ public class ComplexNumbersTest {
 		System.out.println(Complex.toString(Complex.complexMultiply(a, y)));
 		System.out.println(Complex.toString(Complex.complexMultiply(x, b)));
 		System.out.println(Complex.toString(Complex.complexMultiply(a, b)));
+		
+		//Division method tests
+		System.out.println(Complex.toString(Complex.complexMultiply(x, y)));
+		System.out.println(Complex.toString(Complex.complexMultiply(a, y)));
+		System.out.println(Complex.toString(Complex.complexMultiply(x, b)));
+		System.out.println(Complex.toString(Complex.complexMultiply(a, b)));
+		
 	}
 
 	

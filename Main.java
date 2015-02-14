@@ -49,7 +49,7 @@ public class Main {
 			case 4: 
 				leftNumber = getComplex("Left Number", in);
 				rightNumber = getComplex("Right Number", in);
-				result = leftNumber.divide(rightNumber);
+				result = leftNumber.complexDivide(rightNumber);
 				System.out.println(leftNumber + " / " + rightNumber + " = " + result );
 				break;
 			case 5: System.out.println("Goodbye!"); break;

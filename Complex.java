@@ -51,20 +51,54 @@ public class Complex {
 	}
 	
 	//Subtracts the real and imaginary parts of the number separately and returns another complex number of the difference
-		public static Complex complexSubtract(Complex a, Complex b){
-			Complex value = new Complex(0,0);
-			value.real = a.real - b.real;
-			value.imaginary = a.imaginary - b.imaginary;
-			return value;
-		}
+	public static Complex complexSubtract(Complex a, Complex b){
+		Complex value = new Complex(0,0);
+		value.real = a.real - b.real;
+		value.imaginary = a.imaginary - b.imaginary;
+		return value;
+	}
 		
-		//Allows the user to multiply complex numbers without specifying both numbers, using one previously specified with .multiply
-		public Complex complexMultiply(Complex a){
-			this.real = (this.real*a.real) - (this.imaginary*a.imaginary);
-			this.imaginary = 
-		}
+	//Allows the user to multiply complex numbers without specifying both numbers, using one previously specified with .multiply
+	public Complex complexMultiply(Complex a){
+		Complex newNum = new Complex(0,0);
+		newNum.real = (this.real*a.real) - (this.imaginary*a.imaginary);
+		newNum.imaginary = (this.real*a.imaginary) + (this.imaginary*a.real);
+		return newNum;
+	}
+		
+	//Multiplies two complex numbers given both numbers and returns a new complex number
+	public static Complex complexMultiply(Complex a, Complex b){
+		Complex value = new Complex(0,0);
+		value.real = (a.real*b.real) - (a.imaginary*b.imaginary);
+		value.imaginary = (a.real*b.imaginary) + (a.imaginary*b.real);
+		return value;
+	}
 	
+	//Divides complex numbers with only one specified to allow for .divide
+	public Complex complexDivide(Complex a){
+		Complex newNum = new Complex(0,0);
+		newNum.real = this.real;
+		newNum.real = 0 - this.imaginary;
+		return simplify(complexMultiply(newNum,this),complexMultiply(newNum,a));
+		
+	}
 	
+	//Divides complex numbers after specifying both numbers being divided
+	public Complex complexDivide(Complex a, Complex b){
+		Complex newNum = new Complex(0,0);
+		newNum.real = a.real;
+		newNum.real = 0 - a.imaginary;
+		return simplify(complexMultiply(newNum,a),complexMultiply(newNum,b));
+		
+	}
+	
+	//Simplifies the remainder after multiplication by 1 with the conjugate and remainder of the original complex number
+	public Complex simplify(Complex conj, Complex rem){
+		Complex value = new Complex(0,0);
+		value.real = rem.real/conj.real;
+		value.imaginary = rem.imaginary/conj.real;
+		return value;
+	}
 	
 	
 }
